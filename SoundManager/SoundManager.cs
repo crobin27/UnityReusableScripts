@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using System;
+using RobinsonGaming.Debugging;
 
 namespace RobinsonGaming.Audio
 {
@@ -32,7 +33,7 @@ namespace RobinsonGaming.Audio
         public bool HapticEnabled { get; private set; }
 
         // Paths to audio clips in the Resources folder
-        private const string BackgroundLoopPath = "Audio/BackgroundMusic";
+        private const string BackgroundLoopPath = "Audio/Loops/BackgroundMusic";
         private Dictionary<string, string> _audioClipPaths = new Dictionary<string, string>
         {
             { "ButtonClick", "Audio/ButtonClick.mp3" },
@@ -164,8 +165,17 @@ namespace RobinsonGaming.Audio
 
         // Public methods for playing specific sound effects
         public void PlayButtonClick() => PlaySoundEffect("ButtonClick");
-        public void PlayExample1() => PlaySoundEffect("Example1");
-        public void PlayExample2() => PlaySoundEffect("Example2");
+        public void PlayFallIntoPlace() => PlaySoundEffect("FallIntoPlace");
+        public void PlayFunnelIntoPlace() => PlaySoundEffect("FunnelIntoPlace");
+
+        public void PlayMatchSound() => PlaySoundEffect("MatchSound");
+        public void PlayMatchx2Sound() => PlaySoundEffect("Matchx2Sound");
+        public void PlaySingleCoin() => PlaySoundEffect("SingleCoin");
+        
+        public void ChangeToFreeSpinsBackground()
+        {
+
+        }
 
     }
 }

@@ -13,7 +13,7 @@ namespace RobinsonGaming.Debugging
         public static event Action<Exception> OnException;
 
         // Toggle this to turn Bugging on/off.
-        private static bool _isBugMode = false;
+        private static bool _isBugMode = true;
 
         public static void Log(string message)
         {
